@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>first ctf challenge</h1>
+    <!-- this is the flag: TMLVNN{THIS_IS_THE_FLAG} -->
+
+    <div id="hint"></div>
+    <button onclick="showHint()">hint</button>
+
+    <input type="text" id="flag" placeholder="TMLVNN{....}" />
+    <button onclick="checkFlag()">submit</button>
+    <script>
+      function showHint() {
+        let content = document.getElementById("hint");
+
+        if (content.innerHTML == "") {
+          content.innerHTML = "inspect the page";
+        } else {
+          content.innerHTML = "";
+        }
+      }
+
+      function checkFlag() {
+        let input = document.getElementById("flag").value;
+
+        if (input == "TMLVNN{THIS_IS_THE_FLAG}") {
+          console.log("wow you win");
+        } else {
+          console.log("wrong input");
+        }
+      }
+    </script>
+  </body>
+</html>
