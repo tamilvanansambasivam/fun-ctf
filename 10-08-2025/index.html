@@ -14,6 +14,8 @@
 
     <input type="text" id="flag" placeholder="TMLVNN{....}" />
     <button onclick="checkFlag()">submit</button>
+
+    <h1 id="result"></h1>
     <script>
       function showHint() {
         let content = document.getElementById("hint");
@@ -27,11 +29,13 @@
 
       function checkFlag() {
         let input = document.getElementById("flag").value;
-
+        let result = document.getElementById("result");
         if (input == "TMLVNN{THIS_IS_THE_FLAG}") {
           console.log("wow you win");
+          result.innerHTML = "wow you win";
         } else {
           console.log("wrong input");
+          result.innerHTML = "wrong input";
         }
       }
     </script>
